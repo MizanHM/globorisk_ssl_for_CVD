@@ -34,69 +34,70 @@ Traditionally, Globorisk estimates CVD risk in adults aged 40 and above. In this
 
 	Data Cleaning and Preparation
 
-o	Used the STEPs survey dataset. 
+     o	Used the STEPs survey dataset. 
 
-o	Selected key features: `age`, `sex`, `Diabetes Mellitus`, `Total Cholesterol`, `smoking status`, `systolic blood pressure`, and `CVD history`. 
+     o	Selected key features: `age`, `sex`, `Diabetes Mellitus`, `Total Cholesterol`, `smoking status`, `systolic blood pressure`, and `CVD history`. 
 
 	Exploratory Data Analysis (EDA)
 
-o	Plotted distributions of continuous and categorical risk factors. 
+     o	Plotted distributions of continuous and categorical risk factors. 
 
-o	Assessed demographics and baseline health characteristics. 
+     o	Assessed demographics and baseline health characteristics. 
 
 	Calculating the Globorisk Score
 
-o	Integrated R’s Globorisk package into Python using `rpy2`.  Estimated 10-year CVD risk for adults 40+ with no prior CVD history. 
+     o	Integrated R’s Globorisk package into Python using `rpy2`.  Estimated 10-year CVD risk for adults 40+ with no prior CVD history. 
 
 	Risk Categorization and Validation
 
-o	Converted Globorisk scores into percentages and categorized individuals into:
+     o	Converted Globorisk scores into percentages and categorized individuals into:
 
-Low Risk (<5%)
+                      Low Risk (<5%)
 
-Elevated Risk (≥5%)
+                      Elevated Risk (≥5%)
 
-o	Validated against WHO risk categories for 100 individuals:
+    o	Validated against WHO risk categories for 100 individuals:
 
-Sensitivity: 0.98 
+                     Sensitivity: 0.98 
 
-Specificity: 0.94 
+                     Specificity: 0.94 
 
 	Data preparation to building a Semi-Supervised Learning (SSL) Framework
 
-o	Split dataset into labeled and unlabeled portions.
+    o	Split dataset into labeled and unlabeled portions.
 
-o	Scale features (StandardScaler) and handle missing values (SimpleImputer).
+    o	Scale features (StandardScaler) and handle missing values (SimpleImputer).
 
 	Hyperparameter tuning
 
-o	Run grid search for RF, XGB, MLP, and SVC.
+    o	Run grid search for RF, XGB, MLP, and SVC.
 
-o	Select best estimators per model.
+    o	Select best estimators per model.
 
 	Baseline evaluation
 
-o	Train tuned models on labeled training data.
+    o	Train tuned models on labeled training data.
 
-o	Model calibration
+    o	Model calibration
 
-o	Evaluate on a held-out test set.
+    o	Evaluate on a held-out test set.
 
 	Self-training
 
-o	Iteratively pseudo-label unlabeled samples where predicted confidence ≥ 0.99.
+    o	Iteratively pseudo-label unlabeled samples where predicted confidence ≥ 0.99.
 
-o	Add pseudo-labeled samples back to the training pool.
+    o	Add pseudo-labeled samples back to the training pool.
 
-o	Repeat up to 15 iterations or until no new samples meet threshold.
+    o	Repeat up to 15 iterations or until no new samples meet threshold.
 
 	Comparison \& visualization
 
-o	Compare baseline vs SSL performance.
+    o	Compare baseline vs SSL performance.
 
-o	Generate barplots of metrics, iteration history plots, and confusion matrices.
+    o	Generate barplots of metrics, iteration history plots, and confusion matrices.
 
 This approach demonstrates how ML can complement conventional epidemiological models by extending CVD risk stratification to populations not traditionally covered.
+
 
 
 
