@@ -2,15 +2,7 @@
 
 **This project explores how semi-supervised machine learning (SSL) can complement the Globorisk framework, a statistical model used to estimate 10-year cardiovascular disease (CVD) risk.** 
 
-
-
 Traditionally, Globorisk estimates CVD risk in adults aged 40 and above. In this project, I experimented with SSL techniques to extend risk stratification to younger adults, thereby broadening the applicability of conventional risk labeling. Alongside, I built a custom data analysis and ML pipeline to showcase EDA, modeling, and validation using real-world health survey data.
-
-
-
-
-
-
 
 **Objectives**
 
@@ -22,15 +14,7 @@ Traditionally, Globorisk estimates CVD risk in adults aged 40 and above. In this
 
 \- Showcase data science and ML workflows in a health data context.
 
-
-
-
-
-
-
 **Work flow**
-
-
 
 	Data Cleaning and Preparation
 
@@ -118,9 +102,14 @@ Since utilization of the Globorisk model was not applicable for individuals aged
 
 
 MLP performance outstand others with consistently high class-wise performance where it achieved F1 score of 0.99 and 0.98 for the negative class and for the positive class respectively. This result confirms that the self-training approach is a powerful tool for CVD risk labeling in the presence of small labeled data. 
+
+
 <img width="725" height="441" alt="image" src="https://github.com/user-attachments/assets/0adbf76d-fc0f-45f4-92c4-5bd3e4d18f23" />
 
-<img width="406" height="391" alt="image" src="https://github.com/user-attachments/assets/09e73e18-c8fd-4928-bf0a-1c2b5929dd95" />
+
+<img width="406" height="391" alt="image" src="https://github.com/user-attachments/assets/09e73e18-c8fd-4928-bf0a-1c2b5929dd95" /> <img width="563" height="318" alt="image" src="https://github.com/user-attachments/assets/1b363a4e-e396-4a3c-8f5e-0f8f463c7588" />
+
+
 
 
 
