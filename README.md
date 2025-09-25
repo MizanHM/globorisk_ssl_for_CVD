@@ -99,6 +99,28 @@ Traditionally, Globorisk estimates CVD risk in adults aged 40 and above. In this
 This approach demonstrates how ML can complement conventional epidemiological models by extending CVD risk stratification to populations not traditionally covered.
 
 
+**EDA**
+The age distribution shows that majority participants are the younger with a slightly skewed distribution with fewer elderly. Mean age is 34 ± 13.  Total Cholesterol, has a mean of 139.1 ± 36.3 mg/dl where majority participants have a normal <200mg/dl cholesterol level. The Average Systolic Blood Pressure also shows a normal distribution with a mean of 121.4 ±18.6 mmHg. 
+
+
+<img width="975" height="333" alt="image" src="https://github.com/user-attachments/assets/275bd21f-a02c-40fc-a78b-22b8491dff1c" />
+
+
+The CVD risk Score across predictor variables, females have slightly lower CVD risk scores compared to males. Both smoking and diabetes status are strongly associated with elevated CVD risk scores where smokers and diabetes individuals have higher median scores. There are also positive correlations between age, systolic blood pressure and cholesterol level, where a relatively increased CVD risk score was seen in older age groups, with higher systolic blood pressure and elevated total cholesterol levels.
+
+<img width="975" height="316" alt="image" src="https://github.com/user-attachments/assets/994d0b39-fe3a-4be1-a5cb-e3540fe8a875" />
+<img width="975" height="326" alt="image" src="https://github.com/user-attachments/assets/90ab6ecc-8c2c-4db0-8372-5c80f5f36e47" />
+
+
+Since utilization of the Globorisk model was not applicable for individuals aged below 40, most of our dataset, remained unlabeled for CVD risk. A semi-supervised learning approach was used to label the remain data. 
+
+<img width="707" height="415" alt="image" src="https://github.com/user-attachments/assets/e187c3a6-36ce-4cbe-849e-9a5ecd1cb108" />
+
+
+MLP performance outstand others with consistently high class-wise performance where it achieved F1 score of 0.99 and 0.98 for the negative class and for the positive class respectively. This result confirms that the self-training approach is a powerful tool for CVD risk labeling in the presence of small labeled data. 
+<img width="725" height="441" alt="image" src="https://github.com/user-attachments/assets/0adbf76d-fc0f-45f4-92c4-5bd3e4d18f23" />
+
+<img width="406" height="391" alt="image" src="https://github.com/user-attachments/assets/09e73e18-c8fd-4928-bf0a-1c2b5929dd95" />
 
 
 
